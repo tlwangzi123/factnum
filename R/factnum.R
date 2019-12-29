@@ -11,7 +11,7 @@
 #' @return k, which is the number of factors of data.
 #' @author Zi Wang
 #' @examples
-#' library(fact_num)
+#' library(factnum)
 #' n = 50
 #' p = 7
 #' rho = 0.5
