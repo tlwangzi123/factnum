@@ -6,31 +6,32 @@
 \usage{
 factnum(data)
 }
+\arguments{
+\item{data}{The data matrix used for exploratory factor analysis.}
+}
+\value{
+k, which is the number of factors of data.
+}
 \description{
 This function uses a new sequential method proposed in the paper to 
 determine the number of factors in exploratory factor models. 
 It returns an integer, representing the number of factors.
 }
-\details{
-@param data The data matrix used for exploratory factor analysis.
- 
- @export
- 
- @return k, which is the number of factors of data.
- @author Zi Wang
- @examples
- 
- library(fact_num)
- n = 50
- p = 7
- rho = 0.5
- mat = matrix(rep(rho,p), ncol = 1)  
- phi = diag(apply(mat, 1, function(x) 1-x[1]^2))
- sigma_m = mat %*% t(mat) + phi
- x = rnorm(n*p)
- dim(x) = c(n,p)
- r = chol(sigma_m)
- m = x %*% r  # data m contain 1 factor, since rank(mat) = 1
- k = fact_num(m)
- k
+\examples{
+library(fact_num)
+n = 50
+p = 7
+rho = 0.5
+mat = matrix(rep(rho,p), ncol = 1)  
+phi = diag(apply(mat, 1, function(x) 1-x[1]^2))
+sigma_m = mat \%*\% t(mat) + phi
+x = rnorm(n*p)
+dim(x) = c(n,p)
+r = chol(sigma_m)
+m = x \%*\% r  # data m contain 1 factor, since rank(mat) = 1
+k = fact_num(m)
+k
+}
+\author{
+Zi Wang
 }
