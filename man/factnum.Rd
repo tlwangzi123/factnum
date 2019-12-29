@@ -18,7 +18,7 @@ determine the number of factors in exploratory factor models.
 It returns an integer, representing the number of factors.
 }
 \examples{
-library(fact_num)
+library(factnum)
 n = 50
 p = 7
 rho = 0.5
@@ -29,7 +29,7 @@ x = rnorm(n*p)
 dim(x) = c(n,p)
 r = chol(sigma_m)
 m = x \%*\% r  # data m contain 1 factor, since rank(mat) = 1
-k = fact_num(m)
+k = factnum(m)
 k
 }
 \author{
