@@ -4,29 +4,28 @@
 #' determine the number of factors in exploratory factor models. 
 #' It returns an integer, representing the number of factors.
 #' 
-#'  @param data The data matrix used for exploratory factor analysis.
+#' @param data The data matrix used for exploratory factor analysis.
 #'  
-#'  @export
+#' @export
 #'  
-#'  @return k, which is the number of factors of data.
-#'  @author Zi Wang
-#'  @examples
-#'  
-#'  library(factnum)
-#'  n = 50
-#'  p = 7
-#'  rho = 0.5
-#'  mat = matrix(rep(rho,p), ncol = 1)  
-#'  phi = diag(apply(mat, 1, function(x) 1-x[1]^2))
-#'  sigma_m = mat %*% t(mat) + phi
-#'  x = rnorm(n*p)
-#'  dim(x) = c(n,p)
-#'  r = chol(sigma_m)
-#'  m = x %*% r  # data m contain 1 factor, since rank(mat) = 1
-#'  k = factnum(m)
-#'  k
+#' @return k, which is the number of factors of data.
+#' @author Zi Wang
+#' @examples
+#' library(fact_num)
+#' n = 50
+#' p = 7
+#' rho = 0.5
+#' mat = matrix(rep(rho,p), ncol = 1)  
+#' phi = diag(apply(mat, 1, function(x) 1-x[1]^2))
+#' sigma_m = mat %*% t(mat) + phi
+#' x = rnorm(n*p)
+#' dim(x) = c(n,p)
+#' r = chol(sigma_m)
+#' m = x %*% r  # data m contain 1 factor, since rank(mat) = 1
+#' k = fact_num(m)
+#' k
 
-factnum1 = function(data){
+factnum = function(data){
   n = dim(data)[1]
   p = dim(data)[2]
   t = FALSE
