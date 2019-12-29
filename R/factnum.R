@@ -12,7 +12,7 @@
 #'  @author Zi Wang
 #'  @examples
 #'  
-#'  library(fact_num)
+#'  library(factnum)
 #'  n = 50
 #'  p = 7
 #'  rho = 0.5
@@ -23,10 +23,10 @@
 #'  dim(x) = c(n,p)
 #'  r = chol(sigma_m)
 #'  m = x %*% r  # data m contain 1 factor, since rank(mat) = 1
-#'  k = fact_num(m)
+#'  k = factnum(m)
 #'  k
 
-factnum = function(data){
+factnum1 = function(data){
   n = dim(data)[1]
   p = dim(data)[2]
   t = FALSE
