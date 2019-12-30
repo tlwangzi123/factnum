@@ -35,8 +35,6 @@ x = rnorm(n*p)
 dim(x) = c(n,p)
 r = chol(sigma_m)
 m = x %*% r  # data m contain 1 factor, since rank(mat) = 1
-k = fact_num(m)
-> k
 ```
 
 * Second, we run factnum() function.
