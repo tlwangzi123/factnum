@@ -41,7 +41,7 @@ m = x %*% r  # data m contain 1 factor, since rank(mat) = 1
 * Second, we run factnum() function.
 
 ```R
-k = fact_num(m)
+k = factnum(m)
 k
 ```
 
