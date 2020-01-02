@@ -6,7 +6,7 @@ factnum provides a new sequential method to determine the number of factors in e
 
 ## Features
 
-* a more efficient and accurate function to determine the number of factors, compared to traditional LRT method and Bartlett-corrected LRT method.
+* a more efficient and accurate function to determine the number of factors, compared to traditional LRT method and Bartlett-corrected LRT method (details are in the paper).
 * Only require a data matrix to be the input.
 
 
